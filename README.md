@@ -19,7 +19,7 @@ POST https://www.findit-app.com/find/
     "mid" : 123412,
     "keyword": "My Email",
     "type": [
-             {"typeName" : "Email"}
+             {"typeName" : "Email"},
              {"typeName" : "DataExtension"}
             ],
     "opreator": "AND"
