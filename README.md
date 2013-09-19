@@ -18,8 +18,8 @@ POST https://www.findit-app.com/find/
 {
     "mid" : 123412,
     "keyword": "My Email",
-    "createdDate": "",
-    "modifiedDate": "",
+    "startDate": "",
+    "endDate": "",
     "caseSensitive":false,
     "pageNumber": 1,
     "itemsPerPage": 20,
