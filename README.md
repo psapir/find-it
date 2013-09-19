@@ -33,7 +33,6 @@ POST https://www.findit-app.com/find/
 ```
 HTTP/1.1 202 Accepted
 {
-    "Results":
     "totalCount":300,
     "page":1,
     "itemsPerPage": 20,
