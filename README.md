@@ -16,6 +16,7 @@ Main REST API Method
 ```
 POST https://www.findit-app.com/find/
 {
+    "mid" : 123412,
     "keyword": "My Email",
     "type": [
              {"typeName" : "Email"}
