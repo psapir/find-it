@@ -18,6 +18,8 @@ POST https://www.findit-app.com/find/
 {
     "mid" : 123412,
     "keyword": "My Email",
+    "pageNumber": 1,
+    "itemsPerPage": 20,
     "type": [
              {"typeName" : "Email"},
              {"typeName" : "DataExtension"}
@@ -31,7 +33,11 @@ POST https://www.findit-app.com/find/
 ```
 HTTP/1.1 202 Accepted
 {
-    "Results":[
+    "Results":
+    "totalCount":300,
+    "page":1,
+    "itemsPerPage": 20,
+    "items":[
     {
         "name": "Email",
         "customerKey": "Email",
