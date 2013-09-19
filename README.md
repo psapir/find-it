@@ -18,6 +18,9 @@ POST https://www.findit-app.com/find/
 {
     "mid" : 123412,
     "keyword": "My Email",
+    "createdDate": "",
+    "modifiedDate": "",
+    "caseSensitive":false,
     "pageNumber": 1,
     "itemsPerPage": 20,
     "type": [
@@ -41,6 +44,8 @@ HTTP/1.1 202 Accepted
         "name": "Email",
         "customerKey": "Email",
         "type": "Email",
+        "createdDate": "",
+        "modifiedDate": "",
         "URL":"",
         "Path":"my Emails/2013/Dic",
         "ThumbnaiURL":""
@@ -49,6 +54,8 @@ HTTP/1.1 202 Accepted
         "name": "Email DE",
         "customerKey": "DEEmail",
         "type": "DataExtension",
+        "createdDate": "",
+        "modifiedDate": "",
         "URL":"",
         "Path":"Data Extensions/2013/Dic",
         "ThumbnaiURL":""
