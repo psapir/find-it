@@ -119,3 +119,27 @@ overflow: hidden;
   @include scale(0.7);
   @include transition(transform 0.2s);
 }
+
+
+
+.table th { background-color:#C8D66E;}
+.table tbody tr.firstRow > td {
+  background-color: #F8F1B7 !important;
+}
+
+
+
+
+
+
+.button_edge_left{
+
+ float: left;
+    width: 400px;
+    height: 20px;
+    background: url(../img/advanced-search-bar-new.jpg) no-repeat;
+	display:block;
+	position:relative;
+	top:-20px;
+}
+
