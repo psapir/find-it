@@ -36,3 +36,41 @@ c:\mydocuments\visual studio 2012\Projects\FindIt.Api\FindIt.Api\obj\Debug\FindI
 c:\mydocuments\visual studio 2012\Projects\FindIt.Api\FindIt.Api\obj\Debug\FindIt.Api.pdb
 c:\mydocuments\visual studio 2012\Projects\FindIt.Api\FindIt.Api\bin\FindIt.Data.dll
 c:\mydocuments\visual studio 2012\Projects\FindIt.Api\FindIt.Api\bin\FindIt.Data.pdb
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\FindIt.Api.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\FindIt.Api.pdb
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\Antlr3.Runtime.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\EntityFramework.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\FindIt.Data.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\Microsoft.Web.Infrastructure.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\Newtonsoft.Json.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Net.Http.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Net.Http.Formatting.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Net.Http.WebRequest.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Web.Helpers.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Web.Http.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Web.Http.WebHost.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Web.Mvc.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Web.Optimization.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Web.Providers.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Web.Razor.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Web.WebPages.Deployment.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Web.WebPages.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Web.WebPages.Razor.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\WebGrease.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\FindIt.Data.pdb
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\EntityFramework.xml
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\Newtonsoft.Json.xml
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Net.Http.xml
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Net.Http.Formatting.xml
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Net.Http.WebRequest.xml
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Web.Helpers.xml
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Web.Http.xml
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Web.Http.WebHost.xml
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Web.Mvc.xml
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Web.Razor.xml
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Web.WebPages.xml
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Web.WebPages.Deployment.xml
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Web.WebPages.Razor.xml
+C:\MyDocuments\GitHub\find-it\FindIt.Api\obj\Debug\FindIt.Api.csprojResolveAssemblyReference.cache
+C:\MyDocuments\GitHub\find-it\FindIt.Api\obj\Debug\FindIt.Api.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\obj\Debug\FindIt.Api.pdb

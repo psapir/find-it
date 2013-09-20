@@ -24,11 +24,10 @@ namespace FindIt.Api.Controllers
 
             using (Entities db = new Entities())
             { 
-                // Case sensitive settings
-                if(criteria.CaseSensitive)
-                    db.Results.Where(r=>r.ContactIndex.mid == criteria.Mid && r.Keywords.Exists(k=>keywords.Contains(k.KeywordText)));     
-                else
-                    db.Results.Where(r => r.ContactIndex.mid == criteria.Mid && r.Keywords.Exists(k => keywords.Contains(k.KeywordText.ToLower())));     
+                db.Results.Where(r => r.ContactIndex.mid == criteria.Mid && 
+                    criteria.Type.Exists(t => t.TypeName.ToLower() == r.ResultType.ToString().ToLower()) && 
+                    r.Keywords.Exists(k => keywords.Contains(criteria.CaseSensitive ? k.KeywordText.ToLower() : k.KeywordText)))
+                    .Skip(criteria.PageNumber*criteria.ItemsPerPage).Take(criteria.ItemsPerPage);     
             }
 
             return results;
