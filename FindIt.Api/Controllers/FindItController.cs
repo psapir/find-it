@@ -6,15 +6,19 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Mvc;
 
 namespace FindIt.Api.Controllers
 {
     public class FindItController : ApiController
     {
+
         // /api/find
         public IEnumerable<object> Find(Criteria criteria)
         {
             List<object> results = new List<object>();
+
+            List<Result> searchResults = new List<Result>();
 
             // split keywords by comma will search for multiple keywords.
             if (criteria.CaseSensitive)
@@ -24,13 +28,15 @@ namespace FindIt.Api.Controllers
 
             using (Entities db = new Entities())
             { 
-                db.Results.Where(r => r.ContactIndex.mid == criteria.Mid && 
-                    criteria.Type.Exists(t => t.TypeName.ToLower() == r.ResultType.ToString().ToLower()) && 
-                    r.Keywords.Exists(k => keywords.Contains(criteria.CaseSensitive ? k.KeywordText.ToLower() : k.KeywordText)))
-                    .Skip(criteria.PageNumber*criteria.ItemsPerPage).Take(criteria.ItemsPerPage);     
+                /*searchResults = db.Results.Where(r => r.ContactIndex.mid == criteria.Mid && 
+                    criteria.Type.FirstOrDefault(t => t.ToLower() == r.ResultType.ToLower()) != null &&
+                    r.Keywords.FirstOrDefault(k => keywords.Contains(criteria.CaseSensitive ? k.KeywordText.ToLower() : k.KeywordText)) != null)
+                    .OrderBy(r=>r.ModifiedDate).Skip(criteria.PageNumber*criteria.ItemsPerPage).Take(criteria.ItemsPerPage).ToList();*/
+                searchResults = db.Results.ToList();
             }
-
-            return results;
+            
+            return searchResults;
         }
     }
 }
+

@@ -14,7 +14,7 @@ namespace FindIt.Api.Controllers
         {
             using (Entities e = new Entities()) {
 
-                ContactIndex ci = new Models.ContactIndex() { IdContactIndex = Guid.NewGuid(), LastIndexRun = DateTime.Now, mid = "12355" };
+                ContactIndex ci = new Models.ContactIndex() { IdContactIndex = Guid.NewGuid(), LastIndexRun = DateTime.Now, mid = "12356" };
 
                 e.ContactIndexes.Add(ci);
 
@@ -25,12 +25,19 @@ namespace FindIt.Api.Controllers
                 keywords.Add(new Keyword(){IdKeyword=Guid.NewGuid(),KeywordText="test"});
                 e.SaveChanges();
 
-                for (int i = 0; i < 300; i++)
+                for (int i = 0; i < 100; i++)
 			    {
                     var path = "my emails/path/" + i.ToString();
-                    var res = new Result() { IdResult = Guid.NewGuid(), ContactIndex = ci, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, ResultType = ResultType.email, CustomerKey = Guid.NewGuid().ToString(), Path = path, Keywords = e.Keywords.ToList()};
+                    var res = new Result() { Name= "email-"+i,IdResult = Guid.NewGuid(), ContactIndex = ci, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, ResultType = "email", CustomerKey = Guid.NewGuid().ToString(), Path = path, Keywords = e.Keywords.ToList()};
 			        e.Results.Add(res);
 			    }
+
+                for (int i = 0; i < 100; i++)
+                {
+                    var path = "data extensions/path/" + i.ToString();
+                    var res = new Result() { Name = "de-" + i, IdResult = Guid.NewGuid(), ContactIndex = ci, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, ResultType = "dataExtension", CustomerKey = Guid.NewGuid().ToString(), Path = path, Keywords = e.Keywords.ToList() };
+                    e.Results.Add(res);
+                }
                 
                 e.SaveChanges();
             }

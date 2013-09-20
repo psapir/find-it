@@ -12,5 +12,37 @@
 
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
+    <script>
+        $(function () {
+
+            var data = {
+                "mid": 123412,
+                "keyword": "My Email",
+                "createdDate":
+                {
+                    "startDate": "",
+                    "endDate": ""
+                },
+                "modifiedDate":
+                {
+                    "startDate": "",
+                    "endDate": ""
+                },
+                "caseSensitive":false,
+                "pageNumber": 0,
+                "itemsPerPage": 20,
+                "type": ["Email","DataExtension"],
+                "operator": "AND"
+            };
+
+            $.post("api/findit/find", data, function () {
+            }).done(function () {
+                alert('done!');
+            }).fail(function () {
+                alert('failed!');
+            });
+                       
+        });
+    </script>
 </body>
 </html>

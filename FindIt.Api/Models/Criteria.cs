@@ -13,7 +13,7 @@ namespace FindIt.Api.Models
         public String Mid { get; set; }
         public String Keyword { get; set;} 
         public bool CaseSensitive{ get; set; }
-        public List<ItemType> Type { get; set; }
+        public List<String> Type { get; set; }
         public int PageNumber { get; set; }
         public int ItemsPerPage { get; set; }
     }
