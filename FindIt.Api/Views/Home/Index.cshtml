@@ -131,8 +131,9 @@
             <table class="table table-bordered three-fourths altcolor">
               <thead>
                 <tr>
-                  <th>Filename</th>
+                  <th>Name</th>
                   <th>Customer Key</th>
+                  <th>Item Type</th>
                   <th>Date Created</th>
                   <th>Date Modified</th>
                   <th>Location</th>
@@ -140,7 +141,7 @@
               </thead>
               <tbody>
 			  {{#each items}}
-  <tr class="firstRow"><td>{{name}}</td><td>{{customerKey}}</td><td>{{createdDate}}</td><td>{{modifiedDate}}</td><td>{{Path}}</td></tr>
+  <tr class="firstRow"><td>{{name}}</td><td>{{customerKey}}</td><td>{{type}}</td><td>{{createdDate}}</td><td>{{modifiedDate}}</td><td>{{Path}}</td></tr>
 {{else}}
   <tr><td colspan="5">No results found</td></tr>
 {{/each}}

@@ -46,8 +46,8 @@ namespace FindIt.Api.Controllers
                 results.Add(new { name = result.Name, 
                     customerKey = result.CustomerKey,
                     type = result.ResultType, 
-                    createdDate = result.CreatedDate.ToShortDateString(),
-                    modifiedDate = result.ModifiedDate.ToShortDateString(),
+                    createdDate = result.CreatedDate.ToString(),
+                    modifiedDate = result.ModifiedDate.ToString(),
                     URL = result.URL,
                     Path = result.Path,
                     ThumbnaiURL = result.ThumbnailURL
