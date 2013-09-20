@@ -1,0 +1,27 @@
+{
+    "totalCount":300,
+    "page":1,
+    "itemsPerPage": 20,
+    "items":[
+    {
+        "name": "Email",
+        "customerKey": "Email",
+        "type": "Email",
+        "createdDate": "",
+        "modifiedDate": "",
+        "URL":"",
+        "Path":"my Emails/2013/Dic",
+        "ThumbnaiURL":""
+    },
+    {
+        "name": "Email DE",
+        "customerKey": "DEEmail",
+        "type": "DataExtension",
+        "createdDate": "",
+        "modifiedDate": "",
+        "URL":"",
+        "Path":"Data Extensions/2013/Dic",
+        "ThumbnaiURL":""
+    }
+    ]
+}

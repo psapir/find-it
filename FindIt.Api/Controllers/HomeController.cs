@@ -1,7 +1,9 @@
 ﻿using FindIt.Api.Models;
 using FindIt.Data;
+using FuelSDK;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -10,59 +12,37 @@ namespace FindIt.Api.Controllers
 {
     public class HomeController : Controller
     {
+        /// <summary>
+        /// GET /Home/Login called by IMH SSO 
+        /// </summary>
+        /// <param name="jwt"></param>
+        /// <returns></returns>
+        public RedirectResult Login(string jwt)
+        {
+            try
+            {
+                if (jwt.Trim().Length > 0)
+                {
+                    NameValueCollection parameters = new NameValueCollection();
+                    parameters.Add("jwt", jwt);
+
+                    ET_Client client = new ET_Client(parameters);
+
+                    Session["client"] = client;
+
+                    // Redirect to the application redirectURL specified in App Center.
+                    return new RedirectResult("/home/index");
+                }
+
+                return new RedirectResult(Request.Url.ToString());
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public ActionResult Index()
         {
-            using (Entities e = new Entities()) {
-
-                /*ContactIndex ci = new Models.ContactIndex() { IdContactIndex = Guid.NewGuid(), LastIndexRun = DateTime.Now, mid = "12356" };
-
-                e.ContactIndexes.Add(ci);
-
-                for (int i = 0; i < 50; i++)
-			    {
-                                    
-                    var path = "my emails/path/" + i.ToString();
-                    var res = new Result() { Name= "email-"+i,IdResult = Guid.NewGuid(), ContactIndex = ci, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, ResultType = "email", CustomerKey = Guid.NewGuid().ToString(), Path = path};
-			        e.Results.Add(res);
-
-                    List<Keyword> keywords = new List<Keyword>();
-
-                    keywords.Add(new Keyword() { IdKeyword = Guid.NewGuid(), KeywordText = "email",Result=res });
-                    keywords.Add(new Keyword() { IdKeyword = Guid.NewGuid(), KeywordText = "de-", Result = res });
-                    keywords.Add(new Keyword() { IdKeyword = Guid.NewGuid(), KeywordText = "email-1", Result = res });
-
-                    foreach (var item in keywords)
-                    {
-                        e.Keywords.Add(item);
-                    }
-
-                    e.SaveChanges();
-
-			    }
-
-                for (int i = 0; i < 50; i++)
-                {
-
-                    var path = "data extensions/path/" + i.ToString();
-                    var res = new Result() { Name = "de-" + i, IdResult = Guid.NewGuid(), ContactIndex = ci, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, ResultType = "dataExtension", CustomerKey = Guid.NewGuid().ToString(), Path = path};
-                    e.Results.Add(res);
-
-                    List<Keyword> keywords = new List<Keyword>();
-
-                    keywords.Add(new Keyword() { IdKeyword = Guid.NewGuid(), KeywordText = "email", Result = res });
-                    keywords.Add(new Keyword() { IdKeyword = Guid.NewGuid(), KeywordText = "de-", Result = res });
-                    keywords.Add(new Keyword() { IdKeyword = Guid.NewGuid(), KeywordText = "email-1", Result = res });
-
-                    foreach (var item in keywords)
-                    {
-                        e.Keywords.Add(item);
-                    }
-
-                    e.SaveChanges();
-                }*/
-                
-                
-            }
             return View();
         }
     }

@@ -14,7 +14,7 @@ namespace FindIt.Api.Controllers
     {
 
         // /api/find
-        public IEnumerable<object> Find(Criteria criteria)
+        public object Find(Criteria criteria)
         {
             List<object> results = new List<object>();
 
@@ -32,8 +32,20 @@ namespace FindIt.Api.Controllers
                     criteria.Type.Contains(r.ResultType.ToLower()) && r.Name.ToLower().Contains(criteria.Keyword.ToLower()))
                     .OrderBy(r => r.ModifiedDate).Skip(criteria.PageNumber * criteria.ItemsPerPage).Take(criteria.ItemsPerPage).ToList();
             }
-            
-            return searchResults;
+
+            foreach (var result in searchResults)
+            {
+                results.Add(new { name = result.Name, 
+                    customerKey = result.CustomerKey,
+                    type = result.ResultType, 
+                    createdDate = result.CreatedDate.ToShortDateString(),
+                    modifiedDate = result.ModifiedDate.ToShortDateString(),
+                    URL = result.URL,
+                    Path = result.Path,
+                    ThumbnaiURL = result.ThumbnailURL
+                });
+            }
+            return new {items = results,totalCount = 300,page=criteria.PageNumber,itemsPerPage=criteria.ItemsPerPage};
         }
     }
 }

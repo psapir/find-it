@@ -1,0 +1,43 @@
+
+.searchy {
+	background: transparent !Important;
+color: #2e2e2e !Important;
+/*border: none !Important;*/
+float: left !Important;
+width: 75% !Important;
+text-indent: 1em !Important;
+margin-top: 3% !Important;
+line-height: 34px !Important;
+}
+.submitty {
+	margin-left: 3px !Important;
+margin-top: 3% !Important;
+height: 34px !Important;	
+}
+input.searchy {
+	height: 34px !Important;
+}
+
+button.btn.submitty {
+	height: 34px !Important;
+	display: block;
+	float: left;
+	background: url(../img/logo.jpg) no-repeat;
+	height: 36px;
+	width:100px;
+	
+}
+
+input[type="checkbox"] {
+margin-left:10px !important;	
+}
+
+ .radio input[type="radio"], .checkbox input[type="checkbox"] {
+	margin-right:10px !important;
+}
+.collapsy {
+text-align:left;	
+}
+
+.row-fluid .three-fourths{width:76%;}
+.padd20-bottom {padding-bottom:20px;}

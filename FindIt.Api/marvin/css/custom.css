@@ -1,0 +1,121 @@
+
+.searchy {
+	background: transparent !Important;
+color: #2e2e2e !Important;
+/*border: none !Important;*/
+float: left !Important;
+width: 75% !Important;
+text-indent: 1em !Important;
+margin-top: 3% !Important;
+line-height: 34px !Important;
+}
+.submitty {
+	margin-left: 3px !Important;
+/*margin-top: 3% !Important;*/
+height: 85px !Important;
+	width:194px!Important;
+	
+}
+input.searchy {
+	height: 43px !Important;
+}
+
+button.btn.submitty {
+	margin-top: 19px !Important;
+	height: 85px !Important;
+	width: 194px !Important;
+	display: block;
+	float: left;
+	background: url(../img/logo-normal.png) no-repeat top left;
+	outline:none !Important;
+	border: none; 
+		box-shadow: none ;
+		text-indent: -9999em !Important;
+white-space: nowrap !Important;
+}
+
+button.btn.submitty:hover {
+	margin-top: 19px !Important;
+	height: 85px !Important;
+	width: 194px !Important;
+	display: block;
+	float: left;
+	background: url(../img/logo-hover.png) no-repeat top left;
+	outline:none !Important;
+	border: none; 
+		box-shadow: none !Important;
+		text-indent: -9999em !Important;
+white-space: nowrap !Important;
+
+}
+
+button@find-it.btn.submitty {
+/*text-indent: -9999em !Important;
+white-space: nowrap !Important;
+overflow: hidden !Important;
+border: none; !Important;*/
+		
+}
+
+
+
+input[type="checkbox"] {
+margin-left:10px !important;	
+}
+
+ .radio input[type="radio"], .checkbox input[type="checkbox"] {
+	margin-right:10px !important;
+}
+.collapsy {
+text-align:left;	
+}
+
+.row-fluid .three-fourths{width:76%;}
+.padd20-bottom {padding-bottom:20px;}
+
+input.searchinput.searchy[type="placeholder"] !Important {
+	
+}
+.hide-text {
+text-indent: 100%;
+white-space: nowrap;
+overflow: hidden;
+}
+
+.effect-1 {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  margin: 100px;
+  @include border-radius(50%);
+  display: block;
+  text-align: center;
+  line-height: 100px;
+  font-family: 'Monoton', cursive;
+  background-color: black;
+  -webkit-transform: translateZ(0);
+  
+  &:hover {
+    background-color: rgba(0,0,0,0.8);
+    @include transition(background-color 0.2s);
+    
+    &:after {
+      @include scale(1);
+      @include transition(transform 0.2s);
+    }
+  }
+}
+
+.effect-1:after {
+  position: absolute;
+  top:-10px;
+  left: -10px;
+  content: '';
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  @include border-radius(50%);
+  @include box-shadow(0 0 0 5px rgba(0,0,0,0.8));
+  @include scale(0.7);
+  @include transition(transform 0.2s);
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <appSignature>cm5ouoqoav4bbk0uxjnqkejy0bl3hzzw3hbaqjq3ssu34xuhv4j4osmfy1sje4i0y302yyivnbbfjns3qvwgq3zcocfdkndv5ubmg0hpeilvrns5d4evu21cmb1qeipu3fxkxx5sdxpmzplo5w21t3mdmmi4p1b1ear00xtfhvh22zsj55dlmsic4iqpw0a41qkb102r21y4rzswrouj4no2hcuvepttuy0yo3pcdttoznzadkgaixhldondtma</appSignature>
+    <clientId>zh39wpdyfqwh79vcjdfqdhht</clientId>
+    <clientSecret>jBzKAtxjU6rEj97WNdPBaESa</clientSecret>
+    <soapEndPoint>https://webservice.exacttarget.com/Service.asmx</soapEndPoint>
+</configuration>

@@ -59,7 +59,6 @@ C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Web.WebPages.Razor.dll
 C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\WebGrease.dll
 C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\FindIt.Data.pdb
 C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\EntityFramework.xml
-C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\Newtonsoft.Json.xml
 C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Net.Http.xml
 C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Net.Http.Formatting.xml
 C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Net.Http.WebRequest.xml
@@ -74,3 +73,6 @@ C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\System.Web.WebPages.Razor.xml
 C:\MyDocuments\GitHub\find-it\FindIt.Api\obj\Debug\FindIt.Api.csprojResolveAssemblyReference.cache
 C:\MyDocuments\GitHub\find-it\FindIt.Api\obj\Debug\FindIt.Api.dll
 C:\MyDocuments\GitHub\find-it\FindIt.Api\obj\Debug\FindIt.Api.pdb
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\FindIt.ETCrawler.dll
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\FindIt.ETCrawler.pdb
+C:\MyDocuments\GitHub\find-it\FindIt.Api\bin\CSharpSDK.dll
