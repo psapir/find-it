@@ -1,3 +1,6 @@
+var page = 0;
+var totalPages = 0;
+
 findIt = {
 
     templates: {
@@ -40,22 +43,25 @@ findIt = {
             },
             "customerKey": $('#Customer-Key').is(':checked'),
             "caseSensitive": $('#Case-Sensitive').is(':checked'),
-            "pageNumber": 0,
+            "pageNumber": page,
             "itemsPerPage": 20,
             "type": searchTypes,
             "operator": "AND"
         };
 
-       
+        $("#results").fadeOut();
 
        $.ajax({
 			  type: "POST",
 			  url: "https://ampscripteditor.qa-pd.com/api/findit/find",
 			  data: findStuff,
-			  success: function( data ) {
-					data = findIt.jsonify(data);
+			  success: function (data) {
+
+			      data = findIt.jsonify(data);
+			      totalPages = data.totalCount;
 					var results = findIt.templates.result(data);
 					$("#myresults").html(results);
+					$("#results").fadeIn();
 				},
 			  dataType: "text"
 			});
@@ -82,6 +88,80 @@ findIt = {
         findIt.templates.result = Handlebars.compile($("#resultRow").html());
 
         $("#find-it").click(findIt.searchIt);
+
+        
+        var loading  = false; //to prevents multipal ajax loads
+        var total_groups = totalPages; //total record group(s)
+    
+        $(window).scroll(function() { //detect page scroll
+        
+            if($(window).scrollTop() + $(window).height() == $(document).height())  //user scrolled to bottom of the page?
+            {
+            
+                if (page <= total_groups && loading == false) //there's more data to load
+                {
+                    loading = true; //prevent further ajax loading
+                    $('.animation_image').show(); //show loading image
+                    page = page + 1;
+
+                    var typeCount = 0;
+                    var searchTypes = new Array();
+
+                    if ($('#checkbox-email').is(':checked')) {
+                        searchTypes[typeCount] = "email";
+                        typeCount++;
+                    }
+                    if ($('#checkbox-contentarea').is(':checked')) {
+                        searchTypes[typeCount] = "content";
+                        typeCount++;
+                    }
+                    if ($('#checkbox-portfolio').is(':checked')) {
+                        searchTypes[typeCount] = "media";
+                        typeCount++;
+                    }
+                    if ($('#checkbox-dataextension').is(':checked')) {
+                        searchTypes[typeCount] = "dataextension";
+                        typeCount++;
+                    }
+                    //load data from the server using a HTTP POST request
+                    var findStuff = {
+                        "mid": 12356,
+                        "keyword": $("#search-input").val(),
+                        "createdDate":
+                        {
+                            "startDate": $("#date-created-from").val(),
+                            "endDate": $("#date-created-to").val()
+                        },
+                        "modifiedDate":
+                        {
+                            "startDate": $("#date-modified-from").val(),
+                            "endDate": $("#date-modified-to").val()
+                        },
+                        "customerKey": $('#Customer-Key').is(':checked'),
+                        "caseSensitive": $('#Case-Sensitive').is(':checked'),
+                        "pageNumber": page,
+                        "itemsPerPage": 20,
+                        "type": searchTypes,
+                        "operator": "AND"
+                    };
+
+
+                    $.ajax({
+                        type: "POST",
+                        url: "https://ampscripteditor.qa-pd.com/api/findit/find",
+                        data: findStuff,
+                        success: function (data) {
+                            data = findIt.jsonify(data);
+                            var results = findIt.templates.result(data);
+                            $("#myresults").append(results);
+                            $('.animation_image').hide();
+                            loading = false;
+                        },
+                        dataType: "text"
+                    });
+                }
+            }
+        });
     }
 };
 

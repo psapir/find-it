@@ -18,6 +18,8 @@ namespace FindIt.Api.Controllers
         {
             List<object> results = new List<object>();
 
+            var totalPages = 0;
+
             List<Result> searchResults = new List<Result>();
 
             // split keywords by comma will search for multiple keywords.
@@ -28,6 +30,12 @@ namespace FindIt.Api.Controllers
 
             using (Entities db = new Entities())
             {
+                var count = (from r in db.Results
+                             where r.ContactIndex.mid == criteria.Mid && criteria.Type.Contains(r.ResultType.ToLower()) && r.Name.ToLower().Contains(criteria.Keyword.ToLower())
+                                 select r).Count();
+
+                totalPages = (int)Math.Round((double)(count / criteria.ItemsPerPage));
+
                 searchResults = db.Results.Where(r => r.ContactIndex.mid == criteria.Mid &&
                     criteria.Type.Contains(r.ResultType.ToLower()) && r.Name.ToLower().Contains(criteria.Keyword.ToLower()))
                     .OrderBy(r => r.ModifiedDate).Skip(criteria.PageNumber * criteria.ItemsPerPage).Take(criteria.ItemsPerPage).ToList();
@@ -45,7 +53,7 @@ namespace FindIt.Api.Controllers
                     ThumbnaiURL = result.ThumbnailURL
                 });
             }
-            return new {items = results,totalCount = 300,page=criteria.PageNumber,itemsPerPage=criteria.ItemsPerPage};
+            return new {items = results,totalCount = totalPages,page=criteria.PageNumber,itemsPerPage=criteria.ItemsPerPage};
         }
     }
 }

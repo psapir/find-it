@@ -43,6 +43,8 @@ namespace FindIt.Api.Controllers
         }
         public ActionResult Index()
         {
+            FindIt.ETCrawler.Crawler c = new FindIt.ETCrawler.Crawler();
+
             return View();
         }
     }
