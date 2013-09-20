@@ -130,25 +130,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201309200153052_adding-contact-index.cs" />
-    <Compile Include="Migrations\201309200153052_adding-contact-index.Designer.cs">
-      <DependentUpon>201309200153052_adding-contact-index.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201309200218215_pending-migration.cs" />
-    <Compile Include="Migrations\201309200218215_pending-migration.Designer.cs">
-      <DependentUpon>201309200218215_pending-migration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201309200233538_pending-migration-2.cs" />
-    <Compile Include="Migrations\201309200233538_pending-migration-2.Designer.cs">
-      <DependentUpon>201309200233538_pending-migration-2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201309200339489_updated-result-type.cs" />
-    <Compile Include="Migrations\201309200339489_updated-result-type.Designer.cs">
-      <DependentUpon>201309200339489_updated-result-type.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201309200421033_adding-name-field.cs" />
-    <Compile Include="Migrations\201309200421033_adding-name-field.Designer.cs">
-      <DependentUpon>201309200421033_adding-name-field.cs</DependentUpon>
+    <Compile Include="Migrations\201309200611242_first.cs" />
+    <Compile Include="Migrations\201309200611242_first.Designer.cs">
+      <DependentUpon>201309200611242_first.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ContactIndex.cs" />
@@ -173,20 +157,8 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201309200153052_adding-contact-index.resx">
-      <DependentUpon>201309200153052_adding-contact-index.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309200218215_pending-migration.resx">
-      <DependentUpon>201309200218215_pending-migration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309200233538_pending-migration-2.resx">
-      <DependentUpon>201309200233538_pending-migration-2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309200339489_updated-result-type.resx">
-      <DependentUpon>201309200339489_updated-result-type.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309200421033_adding-name-field.resx">
-      <DependentUpon>201309200421033_adding-name-field.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201309200611242_first.resx">
+      <DependentUpon>201309200611242_first.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

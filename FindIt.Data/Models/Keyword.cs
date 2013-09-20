@@ -11,9 +11,12 @@ namespace FindIt.Api.Models
     {
         [Key]
         public Guid IdKeyword { get; set; }
-
+        
+        public Guid IdResult { get; set; }
         [StringLength(1000)]
         public String KeywordText { get; set; }
 
+        [ForeignKey("IdResult")]
+        public Result Result {get;set;}
     }
 }

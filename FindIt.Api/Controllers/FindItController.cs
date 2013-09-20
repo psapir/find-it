@@ -27,12 +27,10 @@ namespace FindIt.Api.Controllers
             List<string> keywords = criteria.Keyword.Split(',').ToList();
 
             using (Entities db = new Entities())
-            { 
-                /*searchResults = db.Results.Where(r => r.ContactIndex.mid == criteria.Mid && 
-                    criteria.Type.FirstOrDefault(t => t.ToLower() == r.ResultType.ToLower()) != null &&
-                    r.Keywords.FirstOrDefault(k => keywords.Contains(criteria.CaseSensitive ? k.KeywordText.ToLower() : k.KeywordText)) != null)
-                    .OrderBy(r=>r.ModifiedDate).Skip(criteria.PageNumber*criteria.ItemsPerPage).Take(criteria.ItemsPerPage).ToList();*/
-                searchResults = db.Results.ToList();
+            {
+                searchResults = db.Results.Where(r => r.ContactIndex.mid == criteria.Mid &&
+                    criteria.Type.Contains(r.ResultType.ToLower()) && r.Name.ToLower().Contains(criteria.Keyword.ToLower()))
+                    .OrderBy(r => r.ModifiedDate).Skip(criteria.PageNumber * criteria.ItemsPerPage).Take(criteria.ItemsPerPage).ToList();
             }
             
             return searchResults;

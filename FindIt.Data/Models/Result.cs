@@ -38,6 +38,6 @@ namespace FindIt.Api.Models
         [ForeignKey("IdContactIndex")]
         public ContactIndex ContactIndex { get; set; }
 
-        public List<Keyword> Keywords { get; set; }
+        
     }
 }
