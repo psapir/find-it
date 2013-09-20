@@ -31,10 +31,7 @@ POST https://www.findit-app.com/find/
     "caseSensitive":false,
     "pageNumber": 1,
     "itemsPerPage": 20,
-    "type": [
-             {"typeName" : "Email"},
-             {"typeName" : "DataExtension"}
-            ],
+    "type": ["Email","DataExtension"],
     "operator": "AND"
 }
 ```
