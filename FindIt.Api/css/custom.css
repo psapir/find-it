@@ -143,3 +143,7 @@ overflow: hidden;
 	top:-20px;
 }
 
+.fuelux .btn:hover, fuelux .btn:focus{
+    background-position:0 !important;
+    transition:none !important;
+}

@@ -50,7 +50,7 @@ findIt = {
 
        $.ajax({
 			  type: "POST",
-			  url: "http://localhost:57259/api/findit/find",
+			  url: "https://ampscripteditor.qa-pd.com/api/findit/find",
 			  data: findStuff,
 			  success: function( data ) {
 					data = findIt.jsonify(data);
