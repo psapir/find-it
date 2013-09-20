@@ -23,7 +23,7 @@ POST https://www.findit-app.com/find/
             "startDate": "",
             "endDate": ""
         },
-    "modfiedDate":
+    "modifiedDate":
         {
             "startDate": "",
             "endDate": ""
@@ -35,7 +35,7 @@ POST https://www.findit-app.com/find/
              {"typeName" : "Email"},
              {"typeName" : "DataExtension"}
             ],
-    "opreator": "AND"
+    "operator": "AND"
 }
 ```
 
